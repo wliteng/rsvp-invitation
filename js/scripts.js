@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     /***************** Waypoints ******************/
-alert("test");
+
     $('.wp1').waypoint(function () {
         $('.wp1').addClass('animated fadeInLeft');
     }, {
