@@ -49,10 +49,13 @@ $(document).ready(function () {
     });
 
     /***************** Initiate Flexslider ******************/
-    $('.flexslider').flexslider({
-        animation: "slide"
-    });
-
+    $('#slider').flexslider({
+        animation: "slide",
+        animationLoop: true,
+        itemWidth: "100%",
+        itemMargin: 0
+    }); 
+    
     /***************** Initiate Fancybox ******************/
 
     $('.single_image').fancybox({

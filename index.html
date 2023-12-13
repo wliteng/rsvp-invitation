@@ -128,7 +128,29 @@
                     it.</p>
             </div>
         </div>
-        <div class="row" style="position: relative;">
+        <div class="row flexslider carousel" style="position:relative;" id="slider">
+            <ul class="slides">
+                <li>
+                    <div>
+                        <img src="img/photo.jpg" alt="" style="width:100%; filter:opacity(70%)">
+                    </div>
+                </li>
+                <li>
+                    <img src="img/photo2.jpg" alt="" style="width:100%">
+                </li>
+                <li>
+                    <img src="img/photo4.jpg" alt=""style="width:100%"> 
+                </li>
+                <li>
+                    <img src="img/photo_4.jpg" alt=""style="width:100%">
+                </li>
+                <li>
+                    <img src="img/photo_5.jpg" alt=""style="width:100%">
+                </li>
+            </ul>
+
+        </div>
+        <!-- <div class="row" style="position: relative;">
             <div class="mySlides fade">
                 <div class="numbertext">1 / 5</div>
                 <img src="img/photo.jpg" style="width:100%">
@@ -152,11 +174,11 @@
               <div class="mySlides fade">
                 <div class="numbertext">5 / 5</div>
                 <img src="img/photo_5.jpg" style="width:100%">
-                <!-- <div class="text">
+                 <div class="text">
                     <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
                     <i class="fa fa-barcode"></i>&nbsp;&nbsp;Get Started</a>
                 </div> -->
-              </div>
+        <!--      </div>
               </div>
               <br>
               
@@ -167,7 +189,7 @@
                 <span class="dot"></span> 
                 <span class="dot"></span> 
               </div>
-        </div>
+        </div> -->
     </div>
 </section>
 
@@ -432,7 +454,7 @@
 <script src="js/jquery.flexslider-min.js"></script>
 <script src="js/jquery.mb.YTPlayer.min.js"></script>
 <script src="js/vendor/ouical.js"></script>
-<script src="js/scripts.min.js"></script>
+<script src="js/scripts.js"></script>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlPw3GQYI3faa_9mRE6plWuM7xNEmrwH0&callback=initMap"></script>
 <!-- Google Analytics -->
@@ -454,12 +476,10 @@
     $("#side").val("bride");
 
     let slideIndex = 0;
-showSlides();
 triggerTab(this, "Venue", "tab_venue");
 
 //$( "#tabs" ).tabs({ active:  });
-
-function showSlides() {
+/* function showSlides() {
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
@@ -474,8 +494,7 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-
+} */
 function triggerTab(evt, eventName, idName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
