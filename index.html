@@ -116,14 +116,14 @@
         <div class="row" style="padding-top:50px">
             <div class="down-arrow floating-arrow"><a href="#invitation"><i class="fa fa-angle-down"></i></a></div>
         </div>
-    </div>
+;display:content;    </div>
 </section>
 
-<section id="invitation" class="section-padding" style="padding-bottom:0px; margin-bottom:0px">
+<section id="invitation" class="section-padding" style="padding-bottom:0px; margin-bottom:0px; background-color:silver; opacity:90%">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h3>We are getting hitched</h3>
+                <h3>We are getting hitched</h3">
                 <p>The dates are 02<sup>nd</sup> of June '24 and we would like you to be a part of
                     it.</p>
             </div>
@@ -132,11 +132,11 @@
             <ul class="slides">
                 <li>
                     <div>
-                        <img src="img/photo.jpg" alt="" style="width:100%; filter:opacity(70%)">
+                        <img src="img/photo.jpg" alt="" style="width:100%; margin-top: 100px">
                     </div>
                 </li>
                 <li>
-                    <img src="img/photo2.jpg" alt="" style="width:100%">
+                    <img src="img/photo2.jpg" alt="" style="width:100%; margin-top: 100px">
                 </li>
                 <li>
                     <img src="img/photo4.jpg" alt=""style="width:100%"> 
@@ -200,9 +200,7 @@
                 <div class="text-center">
                     <h3>How do I get there?</h3>
                 </div>
-                <div class="text-center" style="padding-top:30px">
-                    <iframe class="text-center" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15935.258780032122!2d101.6674204!3d3.1435642!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc49af373d6123%3A0x5d186a46dc8fbe09!2zUnV5aSAmIEx5biDlpoLmhI8!5e0!3m2!1sen!2smy!4v1697531157221!5m2!1sen!2smy" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+        
                 <!-- <div class="text-center">
                     <iframe src="https://embed.waze.com/iframe?zoom=16&lat=3.1438320140992793&lon=101.66739893862177&ct=livemap" width="600" height="450" allowfullscreen></iframe>
                 </div> -->
@@ -210,36 +208,39 @@
                 <!-- 3.1438320140992793, 101.66739893862177 -->
                 
                 <!-- <div id="map-canvas"></div> -->
-                <div id="map-content-wrapper" class="container pointer-events-none" style="width: 100%">
+                <div id="map-content-wrapper" class="container pointer-events-none" style="width: 100%;display:contents;">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="text-center">
-                                <div id="btn-show-content" class="toggle-map-content pointer-events-auto">
-                                    <i class="fa fa-info-circle"></i>&nbsp;&nbsp; Show Location & Contact Info
-                                </div>
-                            </div>
                             <div id="map-content" class="pointer-events-auto">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h5>Ruyi & Lyn</h5>
+                                        <h4>Ruyi & Lyn</h4>
                                         <p>4th Floor Annex Bangsar Shopping Center, 285, Jalan Maarof, 59000 Kuala Lumpur</p>
+
+                                        <div class="text-center">
+                                            <iframe class="text-center" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15935.258780032122!2d101.6674204!3d3.1435642!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc49af373d6123%3A0x5d186a46dc8fbe09!2zUnV5aSAmIEx5biDlpoLmhI8!5e0!3m2!1sen!2smy!4v1697531157221!5m2!1sen!2smy" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <h5>Jaze Ang Ze Ern</h5>
-                                        <p><i class="fa fa-mobile"></i> <a href="tel://+919412345678">+60 123941039</a><br></p>
-                                        <h5>Wong Li Teng</h5>
-                                        <p><i class="fa fa-mobile"></i> <a href="tel://+917123456789">+60 176427192</a></p>
+                                        <h4>Contact us!</h4>
+                                        <h5>Groom: Jaze Ang Ze Ern</h5>
+                                        <i class="fa fa-phone" style="font-size:xx-large; color:rgba(82, 75, 75, 0.863)" href="tel://+60123941039">&nbsp;</i>
+                                        <i class="fa fa-whatsapp" style="font-size:xx-large; color:lightgreen" onclick="window.open('https://wa.me/+60123941039');"
+                                                href="https://wa.me/+6012394s1039" ></i><br>
+                                        <h5>Bride: Wong Li Teng</h5>
+                                        <i class="fa fa-phone" style="font-size:xx-large; color:rgba(82, 75, 75, 0.863)" href="tel://+60176427192">&nbsp;</i>
+                                        <i class="fa fa-whatsapp" style="font-size:xx-large; color:lightgreen" onclick="window.open('https://wa.me/+60176427192');" href="https://wa.me/+60176427192"></i><br></p>
                                     </div>
                                 </div>
                                 <div class="row text-center">
-                                    <div class="col-md-6" style="padding: 5px;">
-                                        <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show Google
+                                    <div class="col-md-3" style="padding: 5px;">
+                                        <a class="btn btn-accent btn-small" href="https://maps.app.goo.gl/tGJA5VjgXRa7YJPf6" target="_blank"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show Google
                                             map</a>
                                     </div>
-                                    <!-- <div class="col-md-6" style="padding: 5px;">
-                                        <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show
+                                    <div class="col-md-3" style="padding: 5px;">
+                                        <a class="btn btn-accent btn-small" href="https://ul.waze.com/ul?place=ChIJI2E9N69JzDERCb6P3EZqGF0&ll=3.14356420%2C101.66742040&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" target="_blank"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show
                                             Waze</a>
-                                    </div> -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -581,7 +582,7 @@
 <script src="js/jquery.mb.YTPlayer.min.js"></script>
 <script src="js/vendor/ouical.js"></script>
 <script src="js/scripts.js"></script>
-<script async defer
+<<script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlPw3GQYI3faa_9mRE6plWuM7xNEmrwH0&callback=initMap"></script>
 <!-- Google Analytics -->
 <script>
