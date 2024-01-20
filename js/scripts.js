@@ -1,4 +1,71 @@
+
 $(document).ready(function () {
+    // iG = 1 if groom then 1, else bride
+    // eN = 1 if english then 1, else chinese
+    var urlParams = new URLSearchParams(window.location.search);
+    var isGroom = urlParams.get('iG');
+    if(isGroom){
+        if(isGroom == 1){
+            $("#side").val("groom");
+        }
+        else{
+            $("#side").val("bride");
+        }
+    }
+
+    var isEn = urlParams.get('eN');
+    if(isEn == 1){
+        $("#lbl_gallery_menu").text("Gallery");
+        $("#lbl_venue_menu").text("Venue");
+        $("#lbl_rsvp_menu").text("RSVP");
+
+        $(".title-name").text("Jaze & Li Teng");
+        $(".title").text("2nd June, 2024");
+        $("#lbl_rsvp_btn").text("RSVP");
+
+        $("#lbl_marry_txt").text("We are getting hitched");
+        $("#lbl_marry_txt2").text("The dates are 02 nd of June '24 and we would like you to be a part of it.");
+
+        $("#lbl_rsvp").text("We would greatly appreciate if you could RSVP before 2nd of March '24");
+
+        $("#f_id").text("Your name");
+        $("#f_id").text("Your name");
+        $("#f_id").text("Your name");
+        $("#f_id").text("Your name");
+        $("#f_id").text("Your name");
+        $("#f_id").text("Your name");
+        // $(this)\
+    }else{
+        $("#lbl_gallery_menu").text("相册");
+        $("#lbl_venue_menu").text("晚宴地点");
+        $("#lbl_rsvp_menu").text("敬请回复（RSVP)");
+
+        $(".title-name").text("士恩 & 莉婷");
+        $(".title").text("2024年6月2号");
+        $("#lbl_rsvp_btn").text("敬请回复（RSVP)");
+
+        $("#lbl_marry_txt").text("我们结婚了");
+        $("#lbl_marry_txt2").text("日期是2024年6月2号，我们诚心邀请您参与");
+
+        $("#h_location").text("怎样去?");
+        $("#h_rsvp_title").text("敬请回复（RSVP)");
+        
+        $("#lbl_rsvp").text("我们希望您能在02/03/2024前回复");
+
+        $("#f_id").attr("placeholder", "名字");
+        $("#f_email").attr("placeholder", "电邮");
+        $("#f_phone").attr("placeholder", "电话号码");
+        $("#f_att").attr("placeholder", "人数");
+        $("#f_babychair").attr("placeholder", "多少个婴儿椅");
+        $("#f_wchair").attr("placeholder", "多少个轮椅");
+
+        $("#lbl_food_option").text("食物选择");
+        $("#f_nhalal").text("非清真");
+        $("#f_halal").text("清真");
+        $("#f_veg").text("素食");
+        $("#f_rsvp_btn").text("确定发送");
+        $("#f_craft").text("这是我们做的哦");
+    }
 
     /***************** Waypoints ******************/
 
