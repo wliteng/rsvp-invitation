@@ -104,13 +104,13 @@
         </div>
         <div class="row" style="padding-top:30px">
             <div class="col-sm-4"></div>
-            <!-- <div class="col-sm-4 hidden-xs text-center"><a href="#rsvp"
-                                                           class="btn btn-accent btn-large rsvp-btn">RSVP</a></div> -->
-            <div class="col-sm-4 text-center"> 
+            <div class="col-sm-4 hidden-xs text-center"><a href="#rsvp"
+                                                           class="btn btn-accent btn-large rsvp-btn">RSVP</a></div>
+            <!-- <div class="col-sm-4 text-center"> 
                 <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
-                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;Get Started
+                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;RSVP
                 </a>
-            </div>
+            </div> -->
             <div class="col-sm-4"></div>
         </div>
         <div class="row" style="padding-top:50px">
@@ -193,57 +193,189 @@
     </div>
 </section>
 
-<!-- <section id="intro">
+<section id="map" class="section-padding">
+    <div class="container container-fluid" style="width: 100%">
+        <!-- <div class="row">
+            <div class="col-md-12"> -->
+                <div class="text-center">
+                    <h3>How do I get there?</h3>
+                </div>
+                <div class="text-center" style="padding-top:30px">
+                    <iframe class="text-center" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15935.258780032122!2d101.6674204!3d3.1435642!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc49af373d6123%3A0x5d186a46dc8fbe09!2zUnV5aSAmIEx5biDlpoLmhI8!5e0!3m2!1sen!2smy!4v1697531157221!5m2!1sen!2smy" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <!-- <div class="text-center">
+                    <iframe src="https://embed.waze.com/iframe?zoom=16&lat=3.1438320140992793&lon=101.66739893862177&ct=livemap" width="600" height="450" allowfullscreen></iframe>
+                </div> -->
+            
+                <!-- 3.1438320140992793, 101.66739893862177 -->
+                
+                <!-- <div id="map-canvas"></div> -->
+                <div id="map-content-wrapper" class="container pointer-events-none" style="width: 100%">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="text-center">
+                                <div id="btn-show-content" class="toggle-map-content pointer-events-auto">
+                                    <i class="fa fa-info-circle"></i>&nbsp;&nbsp; Show Location & Contact Info
+                                </div>
+                            </div>
+                            <div id="map-content" class="pointer-events-auto">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h5>Ruyi & Lyn</h5>
+                                        <p>4th Floor Annex Bangsar Shopping Center, 285, Jalan Maarof, 59000 Kuala Lumpur</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5>Jaze Ang Ze Ern</h5>
+                                        <p><i class="fa fa-mobile"></i> <a href="tel://+919412345678">+60 123941039</a><br></p>
+                                        <h5>Wong Li Teng</h5>
+                                        <p><i class="fa fa-mobile"></i> <a href="tel://+917123456789">+60 176427192</a></p>
+                                    </div>
+                                </div>
+                                <div class="row text-center">
+                                    <div class="col-md-6" style="padding: 5px;">
+                                        <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show Google
+                                            map</a>
+                                    </div>
+                                    <!-- <div class="col-md-6" style="padding: 5px;">
+                                        <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show
+                                            Waze</a>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- </div>
+        </div> -->
+    </div>
+</section>
+
+<section class="rsvp text-center" id="rsvp">
+    <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                    </button>
+                    <div class="section-padding">
+                        <h3>Thank you!</h3>
+                        <p>We are glad to see you join us on our big day.</p>
+                        <div id="add-to-cal"></div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
     <div class="container">
         <div class="row">
-            <div class="col-md-12 text-center">
-                <h3 class="header">Gallery</h3>
+            <div class="col-md-6 col-md-offset-3">
+                <h3 style="margin-top:0px; margin-bottom: 0px;">RSVP</h3>
+                <p style="padding-bottom:0px">We would greatly appreciate if you could RSVP before 2nd of March '24</p>
+                <form id="rsvp-form" class="rsvp-form"
+                        action=""
+                        method="POST">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="form-input-group">
+                                <i class="fa fa-user"></i><input name="name" class=""
+                                                                    placeholder="Your name"
+                                                                    required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="form-input-group">
+                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
+                                                                        placeholder="Your email"
+                                                                        required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="form-input-group">
+                                <i class="fa fa-duotone fa-phone"></i><input type="phone" name="phone" class=""
+                                                                        placeholder="Your phone"
+                                                                        required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="form-input-group">
+                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="1"
+                                                                    max="100"
+                                                                    placeholder="Husband/Wife or kids"
+                                                                    required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6" style="display:none">
+                            <div class="form-input-group" style="display:none">
+                                <i class="fa fa-duotone fa-male"></i><input type="side" name="side" class="" id="side"
+                                                                        placeholder="Groom/Bride Side">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" style="text-align: left;">
+                            <div class="row">
+                                <label class="col-md-12">Food Option:</label>
+                                <div id="food" class="col-md-12 radio-toolbar">
+                                    <div class="col-md-4" style="padding-left: 0px;">
+                                        <input type="radio" id="nonhalal" name="food_option" value="nonhalal" checked="checked">
+                                        <label for="html">Non Halal</label><br>
+                                    </div>
+                                    <div class="col-md-4" style="padding-left: 0px;">
+                                        <input type="radio" id="halal" name="food_option" value="halal">
+                                        <label for="css">Halal</label><br>
+                                    </div>
+                                    <div class="col-md-4" style="padding-left: 0px;">
+                                        <input type="radio" id="vegetarian" name="food_option" value="vegetarian">
+                                        <label for="html">Vegetarian</label><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" style="text-align: left;">
+                            <div class="row">
+                                <label class="col-md-12">Extra Chairs:</label>
+                                <div id="chair"  class="col-md-12 radio-toolbar">
+                                    <div class="col-md-4" style="padding-left: 0px;">
+                                        <input type="radio" id="None" name="chair_option" value="None" checked="checked">
+                                        <label for="html">None</label><br>
+                                    </div>
+                                    <div class="col-md-4" style="padding-left: 0px;">
+                                        <input type="radio" id="BabyChair" name="chair_option" value="BabyChair">
+                                        <label for="html">Baby Chair</label><br>
+                                    </div>
+                                    <div class="col-md-4" style="padding-left: 0px;">
+                                        <input type="radio" id="Weelchair" name="chair_option" value="Weelchair">
+                                        <label for="css">Weelchair</label><br>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" id="alert-wrapper"></div>
+                    </div>
+                    <button class="btn-fill rsvp-btn">
+                        Yes,
+                        that's me!
+                    </button>
+                </form>
             </div>
         </div>
-        <div class="row" style="position: relative;">
-            <div class="mySlides fade">
-                <div class="numbertext">1 / 5</div>
-                <img src="img/photo.jpg" style="width:100%">
-              </div>
-              
-              <div class="mySlides fade">
-                <div class="numbertext">2 / 5</div>
-                <img src="img/photo2.jpg" style="width:100%">
-              </div>
-              
-              <div class="mySlides fade">
-                <div class="numbertext">3 / 5</div>
-                <img src="img/photo4.jpg" style="width:100%">
-              </div>
-
-              <div class="mySlides fade">
-                <div class="numbertext">4 / 5</div>
-                <img src="img/photo_4.jpg" style="width:100%">
-              </div>
-
-              <div class="mySlides fade">
-                <div class="numbertext">5 / 5</div>
-                <img src="img/photo_5.jpg" style="width:100%">
-                <!-- <div class="text">
-                    <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
-                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;Get Started</a>
-                </div> -->
-              <!-- </div>
-              </div>
-              <br>
-              
-              <div style="text-align:center">
-                <span class="dot"></span> 
-                <span class="dot"></span> 
-                <span class="dot"></span> 
-                <span class="dot"></span> 
-                <span class="dot"></span> 
-              </div>
-        </div>
     </div>
-</section> --> -->
+</section>
 
-    <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
+
+    <!-- <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-body">
@@ -275,7 +407,7 @@
                                         <!-- 3.1438320140992793, 101.66739893862177 -->
                                         
                                         <!-- <div id="map-canvas"></div> -->
-                                        <div id="map-content-wrapper" class="container pointer-events-none" style="width: 100%">
+                                        <!-- <div id="map-content-wrapper" class="container pointer-events-none" style="width: 100%">
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="text-center">
@@ -301,10 +433,6 @@
                                                                 <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show Google
                                                                     map</a>
                                                             </div>
-                                                            <!-- <div class="col-md-6" style="padding: 5px;">
-                                                                <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show
-                                                                    Waze</a>
-                                                            </div> -->
                                                         </div>
                                                     </div>
                                                 </div>
@@ -431,11 +559,9 @@
                         </section>
                     </div>
                 </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-</section>
+            </div>
+        </div> -->
+    <!-- </div> -->
 
 <footer>
     <div class="container" style="padding-top: 50px;">
