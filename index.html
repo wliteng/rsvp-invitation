@@ -16,13 +16,13 @@
     <meta name="theme-color" content="#ffffff">
     <meta property="og:title" content="Jaze & Li Teng getting hitched">
     <meta property="og:description" content="We would like to invite you to our big day.">
-    <meta property="og:image" content="https://wedding.ramswaroop.me/img/hero-min.jpg">
+    <meta property="og:image" content="img/photo19.jpg">
     <meta property="og:type" content="website">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"> -->
     <link rel="manifest" href="manifest.json">
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <!--<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5"> -->
 
     <script>
         // load css files from CDN if local node_modules fail
@@ -73,12 +73,12 @@
                 <div class="header-nav">
                     <nav>
                         <ul class="primary-nav">
-                            <!-- <li><a href="#intro">Gallery</a></li> -->
-                            <li><a href="#invitation">Gallery</a></li>
+                            <!--<li><a href="#intro">Gallery</a></li>-->
+                            <li><a id="lbl_gallery_menu" href="#invitation"></li>
                         </ul>
                         <ul class="member-actions">
-                            <li><a href="#map" class="login" onclick="triggerTab(event, 'Venue', 'tab_venue')">Venue</a></li>
-                            <li><a href="#rsvp" class="btn-white btn-small" onclick="triggerTab(event, 'RSVP', 'tab_rsvp')">RSVP</a></li>
+                            <li><a id="lbl_venue_menu" href="#map" class="login" onclick="triggerTab(event, 'Venue', 'tab_venue')">Venue</a></li>
+                            <li><a id="lbl_rsvp_menu" href="#rsvp" class="btn-white btn-small" onclick="triggerTab(event, 'RSVP', 'tab_rsvp')">RSVP</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -92,10 +92,10 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="hero-content text-center">
-                    <h1 class="title-name">Jaze & Li Teng</h1>
+                    <h1 class="title-name"></h1>
                     <!-- <img src="img/logo-lg.png"> -->
                     <!-- <h4 class="title"><span>We are getting hitched!</span></h4> -->
-                    <h4 class="title"><span>2nd June, 2024</span></h4>
+                    <h4 class="title"><span></span></h4>
                     <!-- <p>The dates are 02<sup>nd</sup> of June '24 and we would like you to be a part of
                         it.</p> -->
                     <!-- <a href="#" class="btn btn-fill btn-large btn-margin-right">Scroll Down</a> -->
@@ -105,7 +105,7 @@
         <div class="row" style="padding-top:30px">
             <div class="col-sm-4"></div>
             <div class="col-sm-4 hidden-xs text-center"><a href="#rsvp"
-                                                           class="btn btn-accent btn-large rsvp-btn">RSVP</a></div>
+                                                           class="btn btn-accent btn-large rsvp-btn" id="lbl_rsvp_btn"></a></div>
             <!-- <div class="col-sm-4 text-center"> 
                 <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
                     <i class="fa fa-barcode"></i>&nbsp;&nbsp;RSVP
@@ -123,9 +123,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h3>We are getting hitched</h3">
-                <p>The dates are 02<sup>nd</sup> of June '24 and we would like you to be a part of
-                    it.</p>
+                <h3 id="lbl_marry_txt"></h3>
+                <p id="lbl_marry_txt2"></p>
             </div>
         </div>
         <div class="row flexslider carousel" style="position:relative;" id="slider">
@@ -145,51 +144,72 @@
                     <img src="img/photo_4.jpg" alt=""style="width:100%">
                 </li>
                 <li>
-                    <img src="img/photo_5.jpg" alt=""style="width:100%">
+                    <img src="img/photo5.jpg" alt=""style="width:100%">
                 </li>
+                <li>
+                    <img src="img/photo6.jpg" alt=""style="width:100%">
+                </li>
+                <li>
+                    <img src="img/photo7.jpg" alt=""style="width:100%">
+                </li>
+                <li>
+                    <img src="img/photo8.jpg" alt=""style="width:100%">
+                </li>
+                <li>
+                    <img src="img/photo9.jpg" alt=""style="width:100%">
+                </li>
+                <li>
+                    <img src="img/photo10.jpg" alt=""style="width:100%">
+                </li>
+                <li>
+                    <img src="img/photo11.jpg" alt=""style="width:100%">
+                </li>
+                <li>
+                    <img src="img/photo12.jpg" alt=""style="width:100%">
+                </li>
+                <li>
+                    <img src="img/photo13.jpg" alt=""style="width:100%">
+                </li>
+                <li>
+                    <img src="img/photo14.jpg" alt=""style="width:100%">
+                </li>
+                <li>
+                    <img src="img/photo15.jpg" alt=""style="width:100%">
+                </li>
+                <li>
+                    <img src="img/photo16.jpg" alt=""style="width:100%">
+                </li>
+                <li>
+                    <img src="img/photo17.jpg" alt=""style="width:100%">
+                </li>
+                <li>
+                    <img src="img/photo18.jpg" alt=""style="width:100%">
+                </li>
+                <li>
+                    <img src="img/photo19.jpg" alt=""style="width:100%">
+                </li>
+                <li>
+                    <img src="img/photo20.jpg" alt=""style="width:100%">
+                </li>
+                <li>
+                    <img src="img/photo21.jpg" alt=""style="width:100%">
+                </li>
+                <li>
+                    <img src="img/photo22.jpg" alt=""style="width:100%">
+                </li>
+                <li>
+                    <img src="img/photo23.jpg" alt=""style="width:100%">
+                </li>
+                <li>
+                    <img src="img/photo24.jpg" alt=""style="width:100%">
+                </li>
+                <li>
+                    <img src="img/photo25.jpg" alt=""style="width:100%">
+                </li>
+                
             </ul>
 
         </div>
-        <!-- <div class="row" style="position: relative;">
-            <div class="mySlides fade">
-                <div class="numbertext">1 / 5</div>
-                <img src="img/photo.jpg" style="width:100%">
-              </div>
-              
-              <div class="mySlides fade">
-                <div class="numbertext">2 / 5</div>
-                <img src="img/photo2.jpg" style="width:100%">
-              </div>
-              
-              <div class="mySlides fade">
-                <div class="numbertext">3 / 5</div>
-                <img src="img/photo4.jpg" style="width:100%">
-              </div>
-
-              <div class="mySlides fade">
-                <div class="numbertext">4 / 5</div>
-                <img src="img/photo_4.jpg" style="width:100%">
-              </div>
-
-              <div class="mySlides fade">
-                <div class="numbertext">5 / 5</div>
-                <img src="img/photo_5.jpg" style="width:100%">
-                 <div class="text">
-                    <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
-                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;Get Started</a>
-                </div> -->
-        <!--      </div>
-              </div>
-              <br>
-              
-              <div style="text-align:center">
-                <span class="dot"></span> 
-                <span class="dot"></span> 
-                <span class="dot"></span> 
-                <span class="dot"></span> 
-                <span class="dot"></span> 
-              </div>
-        </div> -->
     </div>
 </section>
 
@@ -198,7 +218,7 @@
         <!-- <div class="row">
             <div class="col-md-12"> -->
                 <div class="text-center">
-                    <h3>How do I get there?</h3>
+                    <h3 id="h_location">How do I get there?</h3>
                 </div>
         
                 <!-- <div class="text-center">
@@ -271,8 +291,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
-                <h3 style="margin-top:0px; margin-bottom: 0px;">RSVP</h3>
-                <p style="padding-bottom:0px">We would greatly appreciate if you could RSVP before 2nd of March '24</p>
+                <h3 style="margin-top:0px; margin-bottom: 0px;" id="h_rsvp_title">RSVP</h3>
+                <p style="padding-bottom:0px" id="lbl_rsvp"></p>
                 <form id="rsvp-form" class="rsvp-form"
                         action=""
                         method="POST">
@@ -281,7 +301,7 @@
                             <div class="form-input-group">
                                 <i class="fa fa-user"></i><input name="name" class=""
                                                                     placeholder="Your name"
-                                                                    required>
+                                                                    required id="f_id">
                             </div>
                         </div>
                     </div>
@@ -290,7 +310,7 @@
                             <div class="form-input-group">
                                 <i class="fa fa-envelope"></i><input type="email" name="email" class=""
                                                                         placeholder="Your email"
-                                                                        required>
+                                                                        required id="f_email">
                             </div>
                         </div>
                     </div>
@@ -299,7 +319,7 @@
                             <div class="form-input-group">
                                 <i class="fa fa-duotone fa-phone"></i><input type="phone" name="phone" class=""
                                                                         placeholder="Your phone"
-                                                                        required>
+                                                                        required id="f_phone">
                             </div>
                         </div>
                     </div>
@@ -308,8 +328,8 @@
                             <div class="form-input-group">
                                 <i class="fa fa-users"></i><input type="number" name="extras" class="" min="1"
                                                                     max="100"
-                                                                    placeholder="Husband/Wife or kids"
-                                                                    required>
+                                                                    placeholder="Number of Attendees"
+                                                                    required id="f_att">
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6" style="display:none">
@@ -319,257 +339,60 @@
                             </div>
                         </div>
                     </div>
+                   
                     <div class="row">
-                        <div class="col-md-12" style="text-align: left;">
+                        <div class="col-md-6 col-sm-6" style="text-align: left;">
+                            <div class="form-input-group">
+                                <i class="fa fa-child"></i><input type="number" name="babychair" class="" min="0"
+                                                                    max="100"
+                                                                    placeholder="Baby Chair(s)" id="f_babychair">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-wheelchair"></i><input type="number" name="wheelchair" class="" min="0"
+                                                                    max="100"
+                                                                    placeholder="Wheelchair(s)"id="f_wchair" >
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-md-12" style="text-align: left;padding-left:30px">
                             <div class="row">
-                                <label class="col-md-12">Food Option:</label>
+                                <label class="col-md-12"id="lbl_food_option">Food Option:</label>
                                 <div id="food" class="col-md-12 radio-toolbar">
                                     <div class="col-md-4" style="padding-left: 0px;">
                                         <input type="radio" id="nonhalal" name="food_option" value="nonhalal" checked="checked">
-                                        <label for="html">Non Halal</label><br>
+                                        <label for="html"id="f_nhalal" >Non Halal</label><br>
                                     </div>
                                     <div class="col-md-4" style="padding-left: 0px;">
                                         <input type="radio" id="halal" name="food_option" value="halal">
-                                        <label for="css">Halal</label><br>
+                                        <label for="css" id="f_halal">Halal</label><br>
                                     </div>
                                     <div class="col-md-4" style="padding-left: 0px;">
                                         <input type="radio" id="vegetarian" name="food_option" value="vegetarian">
-                                        <label for="html">Vegetarian</label><br>
+                                        <label for="html" id="f_veg">Vegetarian</label><br>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12" style="text-align: left;">
-                            <div class="row">
-                                <label class="col-md-12">Extra Chairs:</label>
-                                <div id="chair"  class="col-md-12 radio-toolbar">
-                                    <div class="col-md-4" style="padding-left: 0px;">
-                                        <input type="radio" id="None" name="chair_option" value="None" checked="checked">
-                                        <label for="html">None</label><br>
-                                    </div>
-                                    <div class="col-md-4" style="padding-left: 0px;">
-                                        <input type="radio" id="BabyChair" name="chair_option" value="BabyChair">
-                                        <label for="html">Baby Chair</label><br>
-                                    </div>
-                                    <div class="col-md-4" style="padding-left: 0px;">
-                                        <input type="radio" id="Weelchair" name="chair_option" value="Weelchair">
-                                        <label for="css">Weelchair</label><br>
-                                    </div>
-                                </div>
-                            </div>
-                            
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12" id="alert-wrapper"></div>
                     </div>
-                    <button class="btn-fill rsvp-btn">
-                        Yes,
-                        that's me!
+                    <button class="btn-fill rsvp-btn" id="f_rsvp_btn">
+                        Submit
                     </button>
                 </form>
             </div>
         </div>
     </div>
 </section>
-
-
-    <!-- <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div style="padding-bottom:5px; height: 30px">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
-                        </button>
-                    </div>
-                    
-                    <div class="tab">
-                        <button class="tablinks" onclick="triggerTab(event, 'Venue', null)" id="tab_venue">Venue</button>
-                        <button class="tablinks" onclick="triggerTab(event, 'RSVP', null)" id="tab_rsvp">RSVP</button>
-                        </div>
-                        
-                        <div id="Venue" class="tabcontent">
-                        <section id="map">
-                            <div class="container container-fluid" style="width: 100%">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="text-center">
-                                            <h3>How do I get there?</h3>
-                                        </div>
-                                        <div class="text-center" style="padding-top:30px">
-                                            <iframe class="text-center" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15935.258780032122!2d101.6674204!3d3.1435642!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc49af373d6123%3A0x5d186a46dc8fbe09!2zUnV5aSAmIEx5biDlpoLmhI8!5e0!3m2!1sen!2smy!4v1697531157221!5m2!1sen!2smy" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                        </div>
-                                        <!-- <div class="text-center">
-                                            <iframe src="https://embed.waze.com/iframe?zoom=16&lat=3.1438320140992793&lon=101.66739893862177&ct=livemap" width="600" height="450" allowfullscreen></iframe>
-                                        </div> -->
-                                    
-                                        <!-- 3.1438320140992793, 101.66739893862177 -->
-                                        
-                                        <!-- <div id="map-canvas"></div> -->
-                                        <!-- <div id="map-content-wrapper" class="container pointer-events-none" style="width: 100%">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="text-center">
-                                                        <div id="btn-show-content" class="toggle-map-content pointer-events-auto">
-                                                            <i class="fa fa-info-circle"></i>&nbsp;&nbsp; Show Location & Contact Info
-                                                        </div>
-                                                    </div>
-                                                    <div id="map-content" class="pointer-events-auto">
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <h5>Ruyi & Lyn</h5>
-                                                                <p>4th Floor Annex Bangsar Shopping Center, 285, Jalan Maarof, 59000 Kuala Lumpur</p>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <h5>Jaze Ang Ze Ern</h5>
-                                                                <p><i class="fa fa-mobile"></i> <a href="tel://+919412345678">+60 123941039</a><br></p>
-                                                                <h5>Wong Li Teng</h5>
-                                                                <p><i class="fa fa-mobile"></i> <a href="tel://+917123456789">+60 176427192</a></p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row text-center">
-                                                            <div class="col-md-6" style="padding: 5px;">
-                                                                <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show Google
-                                                                    map</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="rsvp">
-                                            <button class="btn-fill rsvp-btn" style="width:100%" onclick="triggerTab(event, 'RSVP', 'tab_rsvp')">
-                                                RSVP Now
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        </div>
-                        
-                        <div id="RSVP" class="tabcontent">
-                        <section class="rsvp text-center" id="rsvp">
-                            <div class="container container-fluid" style="width: 100%">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <h3 style="margin-top:0px; margin-bottom: 0px;">What are you waiting for?</h3>
-                                        <p style="padding-bottom:0px">We would greatly appreciate if you could RSVP before 2nd of March '23</p>
-                                        <form id="rsvp-form" class="rsvp-form"
-                                                action=""
-                                                method="POST">
-                                            <div class="row">
-                                                <div class="col-md-12 col-sm-12">
-                                                    <div class="form-input-group">
-                                                        <i class="fa fa-user"></i><input name="name" class=""
-                                                                                            placeholder="Your name"
-                                                                                            required>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12 col-sm-12">
-                                                    <div class="form-input-group">
-                                                        <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                                                                                placeholder="Your email"
-                                                                                                required>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12 col-sm-12">
-                                                    <div class="form-input-group">
-                                                        <i class="fa fa-duotone fa-phone"></i><input type="phone" name="phone" class=""
-                                                                                                placeholder="Your phone"
-                                                                                                required>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12 col-sm-12">
-                                                    <div class="form-input-group">
-                                                        <i class="fa fa-users"></i><input type="number" name="extras" class="" min="1"
-                                                                                            max="100"
-                                                                                            placeholder="Husband/Wife or kids"
-                                                                                            required>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 col-sm-6" style="display:none">
-                                                    <div class="form-input-group" style="display:none">
-                                                        <i class="fa fa-duotone fa-male"></i><input type="side" name="side" class="" id="side"
-                                                                                                placeholder="Groom/Bride Side">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12" style="text-align: left;">
-                                                    <div class="row">
-                                                        <label class="col-md-12">Food Option:</label>
-                                                        <div id="food" class="col-md-12 radio-toolbar">
-                                                            <div class="col-md-4" style="padding-left: 0px;">
-                                                                <input type="radio" id="nonhalal" name="food_option" value="nonhalal" checked="checked">
-                                                                <label for="html">Non Halal</label><br>
-                                                            </div>
-                                                            <div class="col-md-4" style="padding-left: 0px;">
-                                                                <input type="radio" id="halal" name="food_option" value="halal">
-                                                                <label for="css">Halal</label><br>
-                                                            </div>
-                                                            <div class="col-md-4" style="padding-left: 0px;">
-                                                                <input type="radio" id="vegetarian" name="food_option" value="vegetarian">
-                                                                <label for="html">Vegetarian</label><br>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12" style="text-align: left;">
-                                                    <div class="row">
-                                                        <label class="col-md-12">Extra Chairs:</label>
-                                                        <div id="chair"  class="col-md-12 radio-toolbar">
-                                                            <div class="col-md-4" style="padding-left: 0px;">
-                                                                <input type="radio" id="None" name="chair_option" value="None" checked="checked">
-                                                                <label for="html">None</label><br>
-                                                            </div>
-                                                            <div class="col-md-4" style="padding-left: 0px;">
-                                                                <input type="radio" id="BabyChair" name="chair_option" value="BabyChair">
-                                                                <label for="html">Baby Chair</label><br>
-                                                            </div>
-                                                            <div class="col-md-4" style="padding-left: 0px;">
-                                                                <input type="radio" id="Weelchair" name="chair_option" value="Weelchair">
-                                                                <label for="css">Weelchair</label><br>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12" id="alert-wrapper"></div>
-                                            </div>
-                                            <button class="btn-fill rsvp-btn">
-                                                Yes,
-                                                that's me!
-                                            </button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-    <!-- </div> -->
-
 <footer>
     <div class="container" style="padding-top: 50px;">
         <div class="row">
             <div class="col-sm-12 text-center content">
                 <span class="to-top-wrapper"><a href="#top" class="to-top"><i class="fa fa-angle-up"></i></a></span>
-                <p>Crafted by Li Teng with lots of <span class="fa fa-heart pulse2"></span></p>
+                <p id="f_craft">Crafted by Jaze & Li Teng with lots of <span class="fa fa-heart pulse2"></span></p>
             </div>
         </div>
     </div>
@@ -586,21 +409,21 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlPw3GQYI3faa_9mRE6plWuM7xNEmrwH0&callback=initMap"></script>
 <!-- Google Analytics -->
 <script>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-46465113-4', 'auto');
-    ga('send', 'pageview');
+    // (function (i, s, o, g, r, a, m) {
+    //     i['GoogleAnalyticsObject'] = r;
+    //     i[r] = i[r] || function () {
+    //         (i[r].q = i[r].q || []).push(arguments)
+    //     }, i[r].l = 1 * new Date();
+    //     a = s.createElement(o),
+    //         m = s.getElementsByTagName(o)[0];
+    //     a.async = 1;
+    //     a.src = g;
+    //     m.parentNode.insertBefore(a, m)
+    // })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    // ga('create', 'UA-46465113-4', 'auto');
+    // ga('send', 'pageview');
 
-    $("#side").val("bride");
+    // $("#side").val("bride");
 
     let slideIndex = 0;
 triggerTab(this, "Venue", "tab_venue");
