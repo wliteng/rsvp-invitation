@@ -50,7 +50,7 @@ $(document).ready(function () {
         $("#h_location").text("怎样去?");
         $("#h_rsvp_title").text("敬请回复（RSVP)");
         
-        $("#lbl_rsvp").text("我们希望您能在02/03/2024前回复");
+        $("#lbl_rsvp").text("我们希望您能在2024年3月2号前回复");
 
         $("#f_id").attr("placeholder", "名字");
         $("#f_email").attr("placeholder", "电邮");
@@ -121,6 +121,7 @@ $(document).ready(function () {
         animationLoop: true,
         itemWidth: "100%",
         itemMargin: 0
+
     }); 
     
     /***************** Initiate Fancybox ******************/
