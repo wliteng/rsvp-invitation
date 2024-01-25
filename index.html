@@ -11,6 +11,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <title>Jaze & Li Teng getting hitched!</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta name="description" content="We would like to invite you to our big day.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#ffffff">
@@ -18,9 +19,6 @@
     <meta property="og:description" content="We would like to invite you to our big day.">
     <meta property="og:image" content="img/photo19.jpg">
     <meta property="og:type" content="website">
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"> -->
     <link rel="manifest" href="manifest.json">
     <!--<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5"> -->
 
@@ -69,14 +67,23 @@
     <section class="navigation">
         <header>
             <div class="header-content">
+                
+                <audio volume autoplay loop id="music">
+                    <!--<source src="horse.ogg" type="audio/ogg">-->
+                    <source src="audio/angel-piano-main-9625.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                  </audio>
                 <div class="logo"><a href="#"><img src="img/logo1.png" alt="Logo"></a></div>
                 <div class="header-nav">
                     <nav>
                         <ul class="primary-nav">
                             <!--<li><a href="#intro">Gallery</a></li>-->
+                          
                             <li><a id="lbl_gallery_menu" href="#invitation"></li>
                         </ul>
                         <ul class="member-actions">
+                            <i class="fa fa-volume-off" style="font-size:large;" id="toggle-icon"></i>
+                            &nbsp;
                             <li><a id="lbl_venue_menu" href="#map" class="login" onclick="triggerTab(event, 'Venue', 'tab_venue')">Venue</a></li>
                             <li><a id="lbl_rsvp_menu" href="#rsvp" class="btn-white btn-small" onclick="triggerTab(event, 'RSVP', 'tab_rsvp')">RSVP</a></li>
                         </ul>
@@ -120,7 +127,7 @@
         <div class="row" style="padding-top:50px">
             <div class="down-arrow floating-arrow"><a href="#invitation"><i class="fa fa-angle-down"></i></a></div>
         </div>
-;display:content;    </div>
+    </div>
 </section>
 
 <section id="invitation" class="section-padding" style="padding-bottom:0px; margin-bottom:0px; background-color:#fff3f3; opacity:90%">
@@ -134,12 +141,10 @@
         <div class="row flexslider carousel" style="position:relative;" id="slider">
             <ul class="slides">
                 <li>
-                    <div>
-                        <img src="img/photo.jpg" alt="" style="width:100%; margin-top: 100px">
-                    </div>
+                    <img src="img/photo.jpg" alt="" style="width:100%;">
                 </li>
                 <li>
-                    <img src="img/photo2.jpg" alt="" style="width:100%; margin-top: 100px">
+                    <img src="img/photo2.jpg" alt="" style="width:100%;">
                 </li>
                 <li>
                     <img src="img/photo4.jpg" alt=""style="width:100%"> 
@@ -401,6 +406,8 @@
         </div>
     </div>
 </footer>
+
+
 <script src="js/vendor/jquery-1.11.2.min.js" onerror="loadJsFromCDN('jquery.js')"></script>
 <script src="node_modules/waypoints/lib/jquery.waypoints.min.js" onerror="loadJsFromCDN('waypoints.js')"></script>
 <script src="js/jquery.fancybox.pack.js"></script>
@@ -409,7 +416,7 @@
 <script src="js/jquery.mb.YTPlayer.min.js"></script>
 <script src="js/vendor/ouical.js"></script>
 <script src="js/scripts.js"></script>
-<<script async defer
+<script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlPw3GQYI3faa_9mRE6plWuM7xNEmrwH0&callback=initMap"></script>
 <!-- Google Analytics -->
 <script>

@@ -4,17 +4,17 @@ $(document).ready(function () {
     // eN = 1 if english then 1, else chinese
     var urlParams = new URLSearchParams(window.location.search);
     var isGroom = urlParams.get('iG');
-    if(isGroom){
-        if(isGroom == 1){
+    if (isGroom) {
+        if (isGroom == 1) {
             $("#side").val("groom");
         }
-        else{
+        else {
             $("#side").val("bride");
         }
     }
 
     var isEn = urlParams.get('eN');
-    if(isEn == 1){
+    if (isEn == 1) {
         $("#lbl_gallery_menu").text("Gallery");
         $("#lbl_venue_menu").text("Venue");
         $("#lbl_rsvp_menu").text("RSVP");
@@ -35,7 +35,7 @@ $(document).ready(function () {
         $("#f_id").text("Your name");
         $("#f_id").text("Your name");
         // $(this)\
-    }else{
+    } else {
         $("#lbl_gallery_menu").text("相册");
         $("#lbl_venue_menu").text("晚宴地点");
         $("#lbl_rsvp_menu").text("敬请回复（RSVP)");
@@ -49,7 +49,7 @@ $(document).ready(function () {
 
         $("#h_location").text("怎样去?");
         $("#h_rsvp_title").text("敬请回复（RSVP)");
-        
+
         $("#lbl_rsvp").text("我们希望您能在2024年3月2号前回复");
 
         $("#f_id").attr("placeholder", "名字");
@@ -66,6 +66,35 @@ $(document).ready(function () {
         $("#f_rsvp_btn").text("确定发送");
         $("#f_craft").text("这是我们做的哦");
     }
+    var initializeMusic = false;
+
+    /******* Background Music ********/
+    var icon = false;
+    var audio = $("#music")[0];
+    audio.volume = 0.2;
+
+    $("#toggle-icon").click(function () {
+        if (icon) {
+            audio.pause();
+            $("#toggle-icon").removeClass("fa-volume-up");
+            $("#toggle-icon").addClass("fa-volume-off");
+            icon = false;
+
+        } else {
+            audio.play();
+            $("#toggle-icon").addClass("fa-volume-up");
+            $("#toggle-icon").removeClass("fa-volume-off");
+            icon = true;
+
+        }
+    });
+
+    document.addEventListener("click", function () {
+        if (initializeMusic == false) {
+            $("#toggle-icon").trigger('click');
+            initializeMusic= true;
+        }
+    });
 
     /***************** Waypoints ******************/
 
@@ -122,8 +151,8 @@ $(document).ready(function () {
         itemWidth: "100%",
         itemMargin: 0
 
-    }); 
-    
+    });
+
     /***************** Initiate Fancybox ******************/
 
     $('.single_image').fancybox({
@@ -306,41 +335,41 @@ $(document).ready(function () {
     //     }
     // });
     /********************** RSVP **********************/
-	$('#rsvp-form').on('submit', function (e) {
-		e.preventDefault();
-		var data = $(this).serialize();
+    $('#rsvp-form').on('submit', function (e) {
+        e.preventDefault();
+        var data = $(this).serialize();
 
-		$('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
+        $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
-		/*if (MD5($('#invite_code').val()) !== 'b0e53b10c1f55ede516b240036b88f40'
-			&& MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
-			$('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
-		} else {*/
-			//$.post('https://script.google.com/macros/s/AKfycbzUqz44wOat0DiGjRV1gUnRf4HRqlRARWggjvHKWvqniP7eVDG-/exec', data)
-			//$.post('https://script.google.com/macros/s/AKfycbyT8xXoQo4tGBa5RGfvicqOKJNyHDPoOJN_OlG0yLzLpm7otBDyV0_HOxIr6DbDaDdq3Q/exec', data)
-            $.post('https://script.google.com/macros/s/AKfycbyDmWNvD6h53ty2ck7hL7CDkM2BenPMQGbYmLr2ERSuEnVs4jJkLvmmIifY1j7EPsb1hg/exec', data)
-				.done(function (data) {
-					console.log(data);
-					if (data.result === "error") {
-						$('#alert-wrapper').html(alert_markup('danger', data.message));
-					} else {
-						$('#alert-wrapper').html('');
-						$('#rsvp-modal').modal('show');
-					}
-				})
-				.fail(function (data) {
-					console.log(data);
-					$('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
-				});
-		//}
-	});
+        /*if (MD5($('#invite_code').val()) !== 'b0e53b10c1f55ede516b240036b88f40'
+            && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
+            $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
+        } else {*/
+        //$.post('https://script.google.com/macros/s/AKfycbzUqz44wOat0DiGjRV1gUnRf4HRqlRARWggjvHKWvqniP7eVDG-/exec', data)
+        //$.post('https://script.google.com/macros/s/AKfycbyT8xXoQo4tGBa5RGfvicqOKJNyHDPoOJN_OlG0yLzLpm7otBDyV0_HOxIr6DbDaDdq3Q/exec', data)
+        $.post('https://script.google.com/macros/s/AKfycbyDmWNvD6h53ty2ck7hL7CDkM2BenPMQGbYmLr2ERSuEnVs4jJkLvmmIifY1j7EPsb1hg/exec', data)
+            .done(function (data) {
+                console.log(data);
+                if (data.result === "error") {
+                    $('#alert-wrapper').html(alert_markup('danger', data.message));
+                } else {
+                    $('#alert-wrapper').html('');
+                    $('#rsvp-modal').modal('show');
+                }
+            })
+            .fail(function (data) {
+                console.log(data);
+                $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
+            });
+        //}
+    });
 });
 
 /********************** Extras **********************/
 
 // Google map
 function initMap() {
-    var location = {lat: 22.5932759, lng: 88.27027720000001};
+    var location = { lat: 22.5932759, lng: 88.27027720000001 };
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: location,
@@ -354,7 +383,7 @@ function initMap() {
 }
 
 function initBBSRMap() {
-    var la_fiesta = {lat: 20.305826, lng: 85.85480189999998};
+    var la_fiesta = { lat: 20.305826, lng: 85.85480189999998 };
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: la_fiesta,
