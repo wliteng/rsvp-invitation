@@ -29,12 +29,6 @@ $(document).ready(function () {
         $("#lbl_rsvp").text("We would greatly appreciate if you could RSVP before 2nd of March '24");
 
         $("#f_id").text("Your name");
-        $("#f_id").text("Your name");
-        $("#f_id").text("Your name");
-        $("#f_id").text("Your name");
-        $("#f_id").text("Your name");
-        $("#f_id").text("Your name");
-        // $(this)\
     } else {
         $("#lbl_gallery_menu").text("相册");
         $("#lbl_venue_menu").text("晚宴地点");
@@ -47,7 +41,7 @@ $(document).ready(function () {
         $("#lbl_marry_txt").text("我们结婚了");
         $("#lbl_marry_txt2").text("日期是2024年6月2号，我们诚心邀请您参与");
 
-        $("#h_location").text("怎样去?");
+        $("#h_location").text("晚宴地点");
         $("#h_rsvp_title").text("敬请回复（RSVP)");
 
         $("#lbl_rsvp").text("我们希望您能在2024年3月2号前回复");
@@ -65,6 +59,10 @@ $(document).ready(function () {
         $("#f_veg").text("素食");
         $("#f_rsvp_btn").text("确定发送");
         $("#f_craft").text("这是我们做的哦");
+
+        $("#contact_us").text("联系我们");
+        $("#ct_groom").text("新郎：洪士恩");
+        $("#ct_bride").text("新娘：黄莉婷");
     }
     var initializeMusic = false;
 
