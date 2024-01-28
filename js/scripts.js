@@ -8,15 +8,29 @@ $(document).ready(function () {
     var PNG = '4233';
     var KUL = '1422';
     var script = document.createElement('script');
+    var strDateEn = '2nd June 2024';
+    var strDateEnLg = '2nd June 2024, Sunday';
+    var strDateCn = '2024年6月2号';
+    var strDateCnLg = '2024年6月2号,星期日';
+    var strDateTimeSt = 'June 02, 2024 19:00'
+    var strDateTimeEd = 'June 02, 2024 23:00'
+    var strSubmitting = '<strong>Just a sec!</strong> We are saving your details.'
     script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCX4LoVSd9Ockg6b6fFOJZaWWxnkCVgvXo&callback=initMap';
     script.async = true;
 
     if (loC == PNG) {
-        $("#venueName").text("Daily Fish Dim Sum BM - Bukit Mertajam 大山脚天天鱼");
-        $("#venueAddr").text("33, Jalan Perniagaan Santuari, 14000 Bukit Mertajam, Pulau Pinang");
-        $("#venueGmap").attr("href", "https://maps.app.goo.gl/FaEgEAYnfGQ8d9A47");
-        $("#venueWaze").attr("href", "https://ul.waze.com/ul?place=ChIJQQMKx_HISjARvzUhIZBXALQ&ll=5.30664550%2C100.48192240&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location");
-        calAddr = 'Daily Fish DIM SUM BM 大山脚天天鱼';
+        $("#venueName").text("Daily Fish BW Raja Uda 北海拉惹乌达 天天鱼");
+        $("#venueAddr").text("7117, Lorong Ceri 7, Taman Aman Jaya, 12300 Butterworth, Pulau Pinang");
+        $("#venueGmap").attr("href", "https://maps.app.goo.gl/znpYSYCqjtnjvrb2A");
+        $("#venueWaze").attr("href", "https://ul.waze.com/ul?place=ChIJU5SuLVvESjARWtZxtcK-LPQ&ll=5.42281900%2C100.38043000&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location");
+        calAddr = 'Daily Fish BW Raja Uda 北海拉惹乌达 天天鱼';
+        strDateEn = '8th June 2024'
+        strDateEnLg = '8th June 2024, Saturday';
+        strDateCn = '2024年6月8号';
+        strDateCnLg = '2024年6月8号,星期六';
+        strDateTimeSt = 'June 08, 2024 19:00'
+        strDateTimeEd = 'June 08, 2024 22:00'
+        strSubmitting = '<strong>请稍等!</strong> 正在为您保存信息.'
     } else if (loC == KUL) {
         loC = "KUL";
         calAddr = 'Ruyi & Lyn 如意';
@@ -40,11 +54,11 @@ $(document).ready(function () {
         $("#lbl_rsvp_menu").text("RSVP");
 
         $(".title-name").text("Jaze & Li Teng");
-        $(".title").text("2nd June, 2024");
+        $(".title").text(strDateEn);
         $("#lbl_rsvp_btn").text("RSVP");
 
         $("#lbl_marry_txt").text("We are getting hitched");
-        $("#lbl_marry_txt2").text("The dates are 02 nd of June '24, Sunday, and we would like you to be a part of it.");
+        $("#lbl_marry_txt2").text("The dates are " + strDateEnLg + ", and we would like you to be a part of it.");
 
         $("#lbl_rsvp").text("We would greatly appreciate if you could RSVP before 2nd of March '24");
 
@@ -59,14 +73,14 @@ $(document).ready(function () {
         $("#lbl_rsvp_menu").text("敬请回复（RSVP)");
 
         $(".title-name").text("士恩 & 莉婷");
-        if(loC == PNG){
+        if (loC == PNG) {
             $(".title").text("2024年6月8号");
             $("#lbl_marry_txt2").text("日期是2024年6月8号，星期六，我们诚心邀请您参与");
 
             showComponent("venue_date_cn_png", "venue_date_cn", "venue_date");
             showComponent("f_craft_cn", "f_craft");
             showComponent("pnl_footer_txt_cn", "pnl_footer_txt");
-        }else{
+        } else {
             $(".title").text("2024年6月2号");
             $("#lbl_marry_txt2").text("日期是2024年6月2号，星期日，我们诚心邀请您参与");
 
@@ -74,7 +88,7 @@ $(document).ready(function () {
             showComponent("f_craft_cn", "f_craft_cn_png", "f_craft");
             showComponent("pnl_footer_txt_cn", "pnl_footer_txt");
         }
-        
+
         $("#lbl_rsvp_btn").text("敬请回复（RSVP)");
         $("#lbl_marry_txt").text("我们结婚了");
 
@@ -325,14 +339,14 @@ $(document).ready(function () {
             title: "Jaze and Li Teng's Wedding",
 
             // Event start date
-            start: new Date('June 02, 2024 19:00'),
+            start: new Date(strDateTimeSt),
 
             // Event duration (IN MINUTES)
             // duration: 120,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('June 02, 2024 23:00'),
+            end: new Date(strDateTimeEd),
 
             // Event Address
             address: calAddr,
@@ -377,7 +391,7 @@ $(document).ready(function () {
         e.preventDefault();
         var data = $(this).serialize();
 
-        $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
+        $('#alert-wrapper').html(alert_markup('info', strSubmitting));
 
         /*if (MD5($('#invite_code').val()) !== 'b0e53b10c1f55ede516b240036b88f40'
             && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
@@ -410,7 +424,7 @@ function initMap() {
     var urlParams = new URLSearchParams(window.location.search);
     var loC = urlParams.get('loC');
 
-    var location_pg = { lat: 5.3072047336930765, lng: 100.48191081904075 };
+    var location_pg = { lat: 5.422840355250391, lng: 100.38048903003009 };
     var location_kl = { lat: 3.1435749530792236, lng: 101.66743469238281 };
     var location = location_kl;
 
@@ -673,8 +687,8 @@ var MD5 = function (string) {
     return temp.toLowerCase();
 };
 
-function showComponent(toShowObj, toHideObjCn, toHideObjCnPng){
-    $("#"+toShowObj).css("display", "block");
-    $("#"+toHideObjCn).css("display", "none");
-    $("#"+toHideObjCnPng).css("display", "none");
+function showComponent(toShowObj, toHideObjCn, toHideObjCnPng) {
+    $("#" + toShowObj).css("display", "block");
+    $("#" + toHideObjCn).css("display", "none");
+    $("#" + toHideObjCnPng).css("display", "none");
 }
