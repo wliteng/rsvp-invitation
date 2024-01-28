@@ -108,7 +108,6 @@
                         <!-- <h4 class="title"><span>We are getting hitched!</span></h4> -->
                         <h4 class="title" style="
                     text-shadow: 1px 1px 8px #c78888;background-color: #071b2dc7;
-    font-size: xx-large;
     display: inline;
                 "><span></span></h4>
                         <!-- <p>The dates are 02<sup>nd</sup> of June '24 and we would like you to be a part of
@@ -119,7 +118,7 @@
             </div>
             <div class="row" style="padding-top:30px">
                 <div class="col-sm-4"></div>
-                <div class="col-sm-4 hidden-xs text-center"><a href="#rsvp" class="btn btn-accent btn-large rsvp-btn"
+                <div class="col-sm-4 hidden-xs text-center"><a href="#rsvp" class="btn btn-accent btn-large rsvp-btn jump-button"
                         id="lbl_rsvp_btn"></a></div>
                 <!-- <div class="col-sm-4 text-center"> 
                 <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
@@ -284,29 +283,58 @@
 
     <section id="map" class="section-padding" style=" ">
         <div class="container container-fluid" style="width: 100%">
-            <!-- <div class="row">
-            <div class="col-md-12"> -->
             <div class="text-center">
                 <h3 id="h_location">How do I get there?</h3>
             </div>
-
-            <!-- <div class="text-center">
-                    <iframe src="https://embed.waze.com/iframe?zoom=16&lat=3.1438320140992793&lon=101.66739893862177&ct=livemap" width="600" height="450" allowfullscreen></iframe>
-                </div> -->
-
-            <!-- 3.1438320140992793, 101.66739893862177 -->
-
-            <!-- <div id="map-canvas"></div> -->
             <div id="map-content-wrapper" class="container pointer-events-none" style="width: 100%;display:contents;">
                 <div class="row">
                     <div class="col-md-12">
                         <div id="map-content" class="pointer-events-auto">
                             <div class="row">
-                                <div class="col-md-6 col-md-offset-3">
-                                    <h4>Ruyi & Lyn</h4>
-                                    <p>4th Floor Annex Bangsar Shopping Center, 285, Jalan Maarof, 59000 Kuala Lumpur
-                                    </p>
-
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading">Venue</div>
+                                                        <div class="panel-body">
+                                                            <h4>Ruyi & Lyn</h4>
+                                                            <h4>4th Floor Annex Bangsar Shopping Center, 285, Jalan Maarof, 59000 Kuala Lumpur </h4>
+                                                        </div> 
+                                                        <div class="panel-footer"><div><span class="fa fa-clock-o"></span>07:00pm</div></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading">Contact Us</div>
+                                                        <div class="panel-body">
+                                                            <h4 style="padding-bottom:0px;margin:0px" id="ct_groom">Groom: Jaze Ang Ze Ern</h4>
+                                                            <i class="fa fa-phone-square"
+                                                                style="cursor:pointer;font-size:xx-large; color:rgba(82, 75, 75, 0.863)"
+                                                                href="tel://+60123941039">&nbsp;</i>
+                                                            <i class="fa fa-whatsapp"
+                                                                style="cursor:pointer;font-size:xx-large;color: lightgreen;"
+                                                                onclick="window.open('https://wa.me/+60123941039');"
+                                                                href="https://wa.me/+60123941039"></i><br>
+                                                            <h4 style="padding-bottom:0px;margin:0px;padding-top:20px" id="ct_bride">Bride: Wong
+                                                                Li Teng</h4>
+                                                            <i class="fa fa-phone-square"
+                                                                style="cursor:pointer;font-size:xx-large; color:rgba(82, 75, 75, 0.863)"
+                                                                href="tel://+60176427192">&nbsp;</i>
+                                                            <i class="fa fa-whatsapp"
+                                                                style="cursor:pointer;font-size:xx-large;color: lightgreen;"
+                                                                onclick="window.open('https://wa.me/+60176427192');"
+                                                                href="https://wa.me/+60176427192"></i><br>
+                                                                </div> 
+                                                        <div class="panel-footer">We look forward to hearing from you <span class="fa fa-heart pulse2"></span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+								</div>
+                                <div class="col-md-12">
                                     <div class="text-center">
                                         <iframe class="text-center"
                                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15935.258780032122!2d101.6674204!3d3.1435642!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc49af373d6123%3A0x5d186a46dc8fbe09!2zUnV5aSAmIEx5biDlpoLmhI8!5e0!3m2!1sen!2smy!4v1697531157221!5m2!1sen!2smy"
@@ -334,25 +362,15 @@
                     </div>
                 </div>
             </div>
-            <!-- </div>
+            <!-- </div>\
         </div> -->
         </div>
     </section>
-    <section id="contact" class="section-padding" style=" ">
-        <div class="container container-fluid" style="width: 100%">
-            <!-- <div class="row">
-            <div class="col-md-12"> -->
+    <!-- <section id="contact" class="section-padding" style=" ">
+        <div class="container container-fluid" style="width: 100%">s
             <div class="text-center">
                 <h3 id="contact_us">Contact us!</h3>
             </div>
-
-            <!-- <div class="text-center">
-                    <iframe src="https://embed.waze.com/iframe?zoom=16&lat=3.1438320140992793&lon=101.66739893862177&ct=livemap" width="600" height="450" allowfullscreen></iframe>
-                </div> -->
-
-            <!-- 3.1438320140992793, 101.66739893862177 -->
-
-            <!-- <div id="map-canvas"></div> -->
             <div id="map-content-wrapper" class="container pointer-events-none" style="width: 100%;display:contents;">
                 <div class="row">
                     <div class="col-md-12">
@@ -384,10 +402,8 @@
                     </div>
                 </div>
             </div>
-            <!-- </div>
-        </div> -->
         </div>
-    </section>
+    </section> -->
     <section class="rsvp text-center" id="rsvp">
         <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">

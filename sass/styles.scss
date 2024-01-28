@@ -983,7 +983,8 @@ RSVP form
       i.fa-male,
       .fa-key,
       .fa-child,
-      .fa-wheelchair {
+      .fa-wheelchair,
+      .fa-clock-o {
         font-size: 14px;
         position: absolute;
         top: 50%;
@@ -1225,6 +1226,7 @@ h4.title {
   color: $txt-light;
   font-size: 20px;
   font-weight: 300;
+  font-size: 22px;
 }
 
 .title span {
@@ -1309,3 +1311,44 @@ input[type='radio']:checked:after {
 // 		}
 // 	}
 // }
+
+.jump-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  animation: jump 0.5s infinite alternate;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+#lbl_gallery_menu, #lbl_venue_menu, #lbl_rsvp_menu{
+  font-size:15px;
+}
+
+.card-venue{
+  height: 300px;
+}
+
+#lbl_rsvp_btn{
+  font-size: 18px;
+}
+
+.panel-footer span{
+  padding-right:5px;
+}
+
+.panel-heading{
+  font-size:18px;
+}
+
+.panel-body{
+  font-size:16px;
+  height:150px;
+}
