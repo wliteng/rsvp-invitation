@@ -67,6 +67,7 @@ $(document).ready(function () {
         showComponent("venue_date", "venue_date_cn", "venue_date_cn_png");
         showComponent("f_craft", "f_craft_cn", "f_craft_cn_png");
         showComponent("pnl_footer_txt", "pnl_footer_txt_cn");
+        
     } else {
         $("#lbl_gallery_menu").text("相册");
         $("#lbl_venue_menu").text("晚宴地点");
@@ -115,6 +116,8 @@ $(document).ready(function () {
         $("#ct_bride").text("新娘：黄莉婷");
 
         $(".pnl-venue").text("地点");
+        $("#modal_txt1").text("谢谢！");
+        $("#modal_txt2").text("我们很感恩您能参加我们的婚礼。");
     }
     var initializeMusic = false;
 
@@ -401,7 +404,6 @@ $(document).ready(function () {
         //$.post('https://script.google.com/macros/s/AKfycbyT8xXoQo4tGBa5RGfvicqOKJNyHDPoOJN_OlG0yLzLpm7otBDyV0_HOxIr6DbDaDdq3Q/exec', data)
         $.post('https://script.google.com/macros/s/AKfycbyDmWNvD6h53ty2ck7hL7CDkM2BenPMQGbYmLr2ERSuEnVs4jJkLvmmIifY1j7EPsb1hg/exec', data)
             .done(function (data) {
-                console.log(data);
                 if (data.result === "error") {
                     $('#alert-wrapper').html(alert_markup('danger', data.message));
                 } else {
@@ -410,7 +412,6 @@ $(document).ready(function () {
                 }
             })
             .fail(function (data) {
-                console.log(data);
                 $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
             });
         //}

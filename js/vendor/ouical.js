@@ -1,4 +1,9 @@
 ;(function(exports) {
+    var urlParams = new URLSearchParams(window.location.search);
+    var loC = urlParams.get('loC');
+    var isEn = urlParams.get('eN');
+    var PNG = '4233';
+    var KUL = '1422';
     var MS_IN_MINUTES = 60 * 1000;
 
     var formatTime = function(date) {
@@ -10,6 +15,17 @@
             formatTime(event.end) :
             formatTime(new Date(event.start.getTime() + (event.duration * MS_IN_MINUTES)));
     };
+
+    var googleCalTxt = "Google Calendar";
+    var yahooCalTxt = "Yahoo! Calendar";
+    var iCalTxt = "ICal Calendar";
+    var outlookCalTxt = "Outlook Calendar";
+    if(isEn == 0 || loC == PNG){
+        googleCalTxt = "谷歌日历";
+        yahooCalTxt = "雅虎日历";
+        iCalTxt = "ICal日历";
+        outlookCalTxt = "Outlook日历";
+    }
 
     var calendarGenerators = {
         google: function(event) {
@@ -27,7 +43,7 @@
                 '&sprop=&sprop=name:'
             ].join(''));
             return '<a class="icon-google" target="_blank" href="' +
-                href + '">Google Calendar</a>';
+                href + '">'+googleCalTxt+'</a>';
         },
 
         yahoo: function(event) {
@@ -60,7 +76,7 @@
             ].join(''));
 
             return '<a class="icon-yahoo" target="_blank" href="' +
-                href + '">Yahoo! Calendar</a>';
+                href + '">'+yahooCalTxt+'</a>';
         },
 
         ics: function(event, eClass, calendarName) {
@@ -82,15 +98,15 @@
                     'END:VCALENDAR'].join('\n'));
 
             return '<a class="' + eClass + '" target="_blank" href="' +
-                href + '">' + calendarName + ' Calendar</a>';
+                href + '">' + calendarName + '</a>';
         },
 
         ical: function(event) {
-            return this.ics(event, 'icon-ical', 'iCal');
+            return this.ics(event, 'icon-ical', iCalTxt);
         },
 
         outlook: function(event) {
-            return this.ics(event, 'icon-outlook', 'Outlook');
+            return this.ics(event, 'icon-outlook', outlookCalTxt);
         }
     };
 
@@ -128,8 +144,13 @@
     var generateMarkup = function(calendars, clazz, calendarId) {
         var result = document.createElement('div');
 
+        var buttonTxt = "Add to Calendar";
+        if(isEn == 0 || loC == PNG){
+            buttonTxt = "加入日历";
+        }
+
         result.innerHTML = '<label id="add-to-calendar-label" for="checkbox-for-' +
-            calendarId + '" class="btn btn-fill btn-small"><i class="fa fa-calendar"></i>&nbsp;&nbsp; Add to Calendar</label>';
+            calendarId + '" class="btn btn-fill btn-small"><i class="fa fa-calendar"></i>&nbsp;&nbsp; '+buttonTxt+'</label>';
         result.innerHTML += '<input name="add-to-calendar-checkbox" class="add-to-calendar-checkbox" id="checkbox-for-' + calendarId + '" type="checkbox">';
 
         Object.keys(calendars).forEach(function(services) {
