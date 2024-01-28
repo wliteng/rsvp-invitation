@@ -3,6 +3,26 @@ $(document).ready(function () {
     // iG = 1 if groom then 1, else bride
     // eN = 1 if english then 1, else chinese
     var urlParams = new URLSearchParams(window.location.search);
+    var loC = urlParams.get('loC');
+    var calAddr;
+    var PNG = '4233';
+    var KUL = '1422';
+    var script = document.createElement('script');
+    script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCX4LoVSd9Ockg6b6fFOJZaWWxnkCVgvXo&callback=initMap';
+    script.async = true;
+
+    if (loC == PNG) {
+        $("#venueName").text("Daily Fish Dim Sum BM - Bukit Mertajam 大山脚天天鱼");
+        $("#venueAddr").text("33, Jalan Perniagaan Santuari, 14000 Bukit Mertajam, Pulau Pinang");
+        $("#venueGmap").attr("href", "https://maps.app.goo.gl/FaEgEAYnfGQ8d9A47");
+        $("#venueWaze").attr("href", "https://ul.waze.com/ul?place=ChIJQQMKx_HISjARvzUhIZBXALQ&ll=5.30664550%2C100.48192240&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location");
+        calAddr = 'Daily Fish DIM SUM BM 大山脚天天鱼';
+    } else if (loC == KUL) {
+        loC = "KUL";
+        calAddr = 'Ruyi & Lyn 如意';
+    }
+    document.head.appendChild(script);
+
     var isGroom = urlParams.get('iG');
     if (isGroom) {
         if (isGroom == 1) {
@@ -90,7 +110,7 @@ $(document).ready(function () {
     document.addEventListener("click", function () {
         if (initializeMusic == false) {
             $("#toggle-icon").trigger('click');
-            initializeMusic= true;
+            initializeMusic = true;
         }
     });
 
@@ -235,6 +255,7 @@ $(document).ready(function () {
     });
 
     /********************** Social Share buttons ***********************/
+    /**
     var share_bar = document.getElementsByClassName('share-bar');
     var po = document.createElement('script');
     po.type = 'text/javascript';
@@ -258,9 +279,10 @@ $(document).ready(function () {
         share_bar[i].innerHTML = html;
         share_bar[i].style.display = 'inline-block';
     }
+    **/
 
     /********************** Embed youtube video *********************/
-    $('.player').YTPlayer();
+    //$('.player').YTPlayer();
 
 
     /********************** Toggle Map Content **********************/
@@ -285,20 +307,20 @@ $(document).ready(function () {
             title: "Jaze and Li Teng's Wedding",
 
             // Event start date
-            start: new Date('June 02, 2023 19:00'),
+            start: new Date('June 02, 2024 19:00'),
 
             // Event duration (IN MINUTES)
             // duration: 120,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('June 02, 2023 23:00'),
+            end: new Date('June 02, 2024 23:00'),
 
             // Event Address
-            address: 'Ruyi & Lyn 如意',
+            address: calAddr,
 
             // Event Description
-            description: "We can't wait to see you on our big day. For any queries or issues, please contact Jaze Ang at +60 123941039."
+            description: "We can't wait to see you on our big day. For any queries or issues, please contact Jaze Ang at +60123941039."
         }
     });
 
@@ -343,7 +365,7 @@ $(document).ready(function () {
             && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {*/
-        //$.post('https://script.google.com/macros/s/AKfycbzUqz44wOat0DiGjRV1gUnRf4HRqlRARWggjvHKWvqniP7eVDG-/exec', data)
+        //$.post('https://script.3.com/macros/s/AKfycbzUqz44wOat0DiGjRV1gUnRf4HRqlRARWggjvHKWvqniP7eVDG-/exec', data)
         //$.post('https://script.google.com/macros/s/AKfycbyT8xXoQo4tGBa5RGfvicqOKJNyHDPoOJN_OlG0yLzLpm7otBDyV0_HOxIr6DbDaDdq3Q/exec', data)
         $.post('https://script.google.com/macros/s/AKfycbyDmWNvD6h53ty2ck7hL7CDkM2BenPMQGbYmLr2ERSuEnVs4jJkLvmmIifY1j7EPsb1hg/exec', data)
             .done(function (data) {
@@ -367,19 +389,34 @@ $(document).ready(function () {
 
 // Google map
 function initMap() {
-    var location = { lat: 22.5932759, lng: 88.27027720000001 };
+    var urlParams = new URLSearchParams(window.location.search);
+    var loC = urlParams.get('loC');
+
+    var location_pg = { lat: 5.3072047336930765, lng: 100.48191081904075 };
+    var location_kl = { lat: 3.1435749530792236, lng: 101.66743469238281 };
+    var location = location_kl;
+
+    if (loC == '4233') {
+        location = location_pg;
+    }
+    //var location = { lat: 3.1435749530792236, lng: 101.66743469238281 };
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: location,
         scrollwheel: false
     });
 
+    var request = {
+        placeId: "ChIJI2E9N69JzDERCb6P3EZqGF0",
+        fields: ['name']
+    };
+
     var marker = new google.maps.Marker({
         position: location,
         map: map
     });
 }
-
+/**
 function initBBSRMap() {
     var la_fiesta = { lat: 20.305826, lng: 85.85480189999998 };
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
@@ -392,7 +429,7 @@ function initBBSRMap() {
         position: la_fiesta,
         map: map
     });
-}
+}**/
 
 // alert_markup
 function alert_markup(alert_type, msg) {

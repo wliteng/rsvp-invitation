@@ -80,7 +80,7 @@
                     <div class="header-nav">
                         <nav>
                             <ul class="primary-nav">
-                                
+
                             </ul>
                             <ul class="member-actions">
                                 <li><a href="#eng-pics" class="login" id="lbl_gallery_menu"></a></li>
@@ -118,8 +118,8 @@
             </div>
             <div class="row" style="padding-top:30px">
                 <div class="col-sm-4"></div>
-                <div class="col-sm-4 hidden-xs text-center"><a href="#rsvp" class="btn btn-accent btn-large rsvp-btn jump-button"
-                        id="lbl_rsvp_btn"></a></div>
+                <div class="col-sm-4 hidden-xs text-center"><a href="#rsvp"
+                        class="btn btn-accent btn-large btn-fill rsvp-btn jump-button" style ="opacity:0.8" id="lbl_rsvp_btn"></a></div>
                 <!-- <div class="col-sm-4 text-center"> 
                 <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
                     <i class="fa fa-barcode"></i>&nbsp;&nbsp;RSVP
@@ -281,7 +281,7 @@
     </div>-->
     </section>
 
-    <section id="map" class="section-padding" style=" ">
+    <section id="map" class="section-padding">
         <div class="container container-fluid" style="width: 100%">
             <div class="text-center">
                 <h3 id="h_location">How do I get there?</h3>
@@ -299,17 +299,21 @@
                                                     <div class="panel panel-default">
                                                         <div class="panel-heading">Venue</div>
                                                         <div class="panel-body">
-                                                            <h4>Ruyi & Lyn</h4>
-                                                            <h4>4th Floor Annex Bangsar Shopping Center, 285, Jalan Maarof, 59000 Kuala Lumpur </h4>
-                                                        </div> 
-                                                        <div class="panel-footer"><div><span class="fa fa-clock-o"></span>07:00pm</div></div>
+                                                            <h4 id="venueName">Ruyi & Lyn</h4>
+                                                            <h4 id="venueAddr">4th Floor Annex Bangsar Shopping Center,
+                                                                285, Jalan Maarof, 59000 Kuala Lumpur </h4>
+                                                        </div>
+                                                        <div class="panel-footer">
+                                                            <div><span class="fa fa-clock-o"></span>07:00pm</div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="panel panel-default">
                                                         <div class="panel-heading">Contact Us</div>
                                                         <div class="panel-body">
-                                                            <h4 style="padding-bottom:0px;margin:0px" id="ct_groom">Groom: Jaze Ang Ze Ern</h4>
+                                                            <h4 style="padding-bottom:0px;margin:0px" id="ct_groom">
+                                                                Groom: Jaze Ang Ze Ern</h4>
                                                             <i class="fa fa-phone-square"
                                                                 style="cursor:pointer;font-size:xx-large; color:rgba(82, 75, 75, 0.863)"
                                                                 href="tel://+60123941039">&nbsp;</i>
@@ -317,7 +321,8 @@
                                                                 style="cursor:pointer;font-size:xx-large;color: lightgreen;"
                                                                 onclick="window.open('https://wa.me/+60123941039');"
                                                                 href="https://wa.me/+60123941039"></i><br>
-                                                            <h4 style="padding-bottom:0px;margin:0px;padding-top:20px" id="ct_bride">Bride: Wong
+                                                            <h4 style="padding-bottom:0px;margin:0px;padding-top:20px"
+                                                                id="ct_bride">Bride: Wong
                                                                 Li Teng</h4>
                                                             <i class="fa fa-phone-square"
                                                                 style="cursor:pointer;font-size:xx-large; color:rgba(82, 75, 75, 0.863)"
@@ -326,36 +331,32 @@
                                                                 style="cursor:pointer;font-size:xx-large;color: lightgreen;"
                                                                 onclick="window.open('https://wa.me/+60176427192');"
                                                                 href="https://wa.me/+60176427192"></i><br>
-                                                                </div> 
-                                                        <div class="panel-footer">We look forward to hearing from you <span class="fa fa-heart pulse2"></span></div>
+                                                        </div>
+                                                        <div class="panel-footer">We look forward to hearing from you
+                                                            <span class="fa fa-heart pulse2"></span></div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-								</div>
+                                </div>
                                 <div class="col-md-12">
-                                    <div class="text-center">
-                                        <iframe class="text-center"
-                                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15935.258780032122!2d101.6674204!3d3.1435642!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc49af373d6123%3A0x5d186a46dc8fbe09!2zUnV5aSAmIEx5biDlpoLmhI8!5e0!3m2!1sen!2smy!4v1697531157221!5m2!1sen!2smy"
-                                            width="100%" height="450" style="border:0;" allowfullscreen=""
-                                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                    </div>
+                                    <div id="map-canvas"></div>
+
                                     <div class="col-md-12 text-center">
                                         <div class="col-md-6" style="padding: 5px;">
-                                            <a class="btn btn-accent btn-small"
+                                            <a id="venueGmap" class="btn btn-accent btn-small"
                                                 href="https://maps.app.goo.gl/tGJA5VjgXRa7YJPf6" target="_blank"><i
-                                                    class="fa fa-map-marker"></i>&nbsp;&nbsp;Google
-                                                maps</a>
+                                                    class="fa fa-map-marker"></i>&nbsp;&nbsp;Google maps</a>
                                         </div>
                                         <div class="col-md-6" style="padding: 5px;">
-                                            <a class="btn btn-accent btn-small"
+                                            <a id="venueWaze" class="btn btn-accent btn-small"
                                                 href="https://ul.waze.com/ul?place=ChIJI2E9N69JzDERCb6P3EZqGF0&ll=3.14356420%2C101.66742040&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
                                                 target="_blank"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Waze</a>
                                         </div>
                                     </div>
                                 </div>
-                               
+
                             </div>
 
                         </div>
@@ -371,6 +372,7 @@
             <div class="text-center">
                 <h3 id="contact_us">Contact us!</h3>
             </div>
+
             <div id="map-content-wrapper" class="container pointer-events-none" style="width: 100%;display:contents;">
                 <div class="row">
                     <div class="col-md-12">
@@ -430,24 +432,24 @@
                         <div class="row">
                             <div class="col-md-12 col-sm-12">
                                 <div class="form-input-group">
-                                    <i class="fa fa-user"></i><input name="name" class="" placeholder="Your name"
-                                        required id="f_id">
+                                    <i class="fa fa-user"></i><input name="name" autocomplete="name" class=""
+                                        placeholder="Your name" required id="f_id">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 col-sm-12">
                                 <div class="form-input-group">
-                                    <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                        placeholder="Your email" required id="f_email">
+                                    <i class="fa fa-envelope"></i><input autocomplete="email" type="email" name="email"
+                                        class="" placeholder="Your email" required id="f_email">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 col-sm-12">
                                 <div class="form-input-group">
-                                    <i class="fa fa-duotone fa-phone"></i><input type="phone" name="phone" class=""
-                                        placeholder="Your phone" required id="f_phone">
+                                    <i class="fa fa-duotone fa-phone"></i><input autocomplete="phone" type="phone"
+                                        name="phone" class="" placeholder="Your phone" required id="f_phone">
                                 </div>
                             </div>
                         </div>
@@ -482,21 +484,21 @@
                             <div class="row">
                                 <div class="col-md-12" style="text-align: left;padding-left:30px">
                                     <div class="row">
-                                        <label class="col-md-12" id="lbl_food_option">Food Option:</label>
+                                        <a class="col-md-12" id="lbl_food_option">Food Option:</a>
                                         <div id="food" class="col-md-12 radio-toolbar">
                                             <div class="col-md-4" style="padding-left: 0px;">
                                                 <input type="radio" id="nonhalal" name="food_option" value="nonhalal"
                                                     checked="checked">
-                                                <label for="html" id="f_nhalal">Non Halal</label><br>
+                                                <label id="f_nhalal" for="nonhalal">Non Halal</label><br>
                                             </div>
                                             <div class="col-md-4" style="padding-left: 0px;">
                                                 <input type="radio" id="halal" name="food_option" value="halal">
-                                                <label for="css" id="f_halal">Halal</label><br>
+                                                <label id="f_halal" for="halal">Halal</label><br>
                                             </div>
                                             <div class="col-md-4" style="padding-left: 0px;">
                                                 <input type="radio" id="vegetarian" name="food_option"
                                                     value="vegetarian">
-                                                <label for="html" id="f_veg">Vegetarian</label><br>
+                                                <label id="f_veg" for="vegetarian">Vegetarian</label><br>
                                             </div>
                                         </div>
                                     </div>
@@ -533,46 +535,8 @@
     <script src="js/jquery.mb.YTPlayer.min.js"></script>
     <script src="js/vendor/ouical.js"></script>
     <script src="js/scripts.js"></script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlPw3GQYI3faa_9mRE6plWuM7xNEmrwH0&callback=initMap"></script>
-    <!-- Google Analytics -->
-    <script>
-        // (function (i, s, o, g, r, a, m) {
-        //     i['GoogleAnalyticsObject'] = r;
-        //     i[r] = i[r] || function () {
-        //         (i[r].q = i[r].q || []).push(arguments)
-        //     }, i[r].l = 1 * new Date();
-        //     a = s.createElement(o),
-        //         m = s.getElementsByTagName(o)[0];
-        //     a.async = 1;
-        //     a.src = g;
-        //     m.parentNode.insertBefore(a, m)
-        // })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-        // ga('create', 'UA-46465113-4', 'auto');
-        // ga('send', 'pageview');
 
-        // $("#side").val("bride");
 
-        let slideIndex = 0;
-
-        //$( "#tabs" ).tabs({ active:  });
-        /* function showSlides() {
-          let i;
-          let slides = document.getElementsByClassName("mySlides");
-          let dots = document.getElementsByClassName("dot");
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-          }
-          slideIndex++;
-          if (slideIndex > slides.length) {slideIndex = 1}    
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
-          setTimeout(showSlides, 2000); // Change image every 2 seconds
-        } */
-    </script>
 </body>
 
 </html>
