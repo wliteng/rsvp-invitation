@@ -44,22 +44,39 @@ $(document).ready(function () {
         $("#lbl_rsvp_btn").text("RSVP");
 
         $("#lbl_marry_txt").text("We are getting hitched");
-        $("#lbl_marry_txt2").text("The dates are 02 nd of June '24 and we would like you to be a part of it.");
+        $("#lbl_marry_txt2").text("The dates are 02 nd of June '24, Sunday, and we would like you to be a part of it.");
 
         $("#lbl_rsvp").text("We would greatly appreciate if you could RSVP before 2nd of March '24");
 
         $("#f_id").text("Your name");
+
+        showComponent("venue_date", "venue_date_cn", "venue_date_cn_png");
+        showComponent("f_craft", "f_craft_cn", "f_craft_cn_png");
+        showComponent("pnl_footer_txt", "pnl_footer_txt_cn");
     } else {
         $("#lbl_gallery_menu").text("相册");
         $("#lbl_venue_menu").text("晚宴地点");
         $("#lbl_rsvp_menu").text("敬请回复（RSVP)");
 
         $(".title-name").text("士恩 & 莉婷");
-        $(".title").text("2024年6月2号");
-        $("#lbl_rsvp_btn").text("敬请回复（RSVP)");
+        if(loC == PNG){
+            $(".title").text("2024年6月8号");
+            $("#lbl_marry_txt2").text("日期是2024年6月8号，星期六，我们诚心邀请您参与");
 
+            showComponent("venue_date_cn_png", "venue_date_cn", "venue_date");
+            showComponent("f_craft_cn", "f_craft");
+            showComponent("pnl_footer_txt_cn", "pnl_footer_txt");
+        }else{
+            $(".title").text("2024年6月2号");
+            $("#lbl_marry_txt2").text("日期是2024年6月2号，星期日，我们诚心邀请您参与");
+
+            showComponent("venue_date_cn", "venue_date_cn_png", "venue_date");
+            showComponent("f_craft_cn", "f_craft_cn_png", "f_craft");
+            showComponent("pnl_footer_txt_cn", "pnl_footer_txt");
+        }
+        
+        $("#lbl_rsvp_btn").text("敬请回复（RSVP)");
         $("#lbl_marry_txt").text("我们结婚了");
-        $("#lbl_marry_txt2").text("日期是2024年6月2号，我们诚心邀请您参与");
 
         $("#h_location").text("晚宴地点");
         $("#h_rsvp_title").text("敬请回复（RSVP)");
@@ -78,11 +95,12 @@ $(document).ready(function () {
         $("#f_halal").text("清真");
         $("#f_veg").text("素食");
         $("#f_rsvp_btn").text("确定发送");
-        $("#f_craft").text("这是我们做的哦");
 
         $("#contact_us").text("联系我们");
         $("#ct_groom").text("新郎：洪士恩");
         $("#ct_bride").text("新娘：黄莉婷");
+
+        $(".pnl-venue").text("地点");
     }
     var initializeMusic = false;
 
@@ -654,3 +672,9 @@ var MD5 = function (string) {
 
     return temp.toLowerCase();
 };
+
+function showComponent(toShowObj, toHideObjCn, toHideObjCnPng){
+    $("#"+toShowObj).css("display", "block");
+    $("#"+toHideObjCn).css("display", "none");
+    $("#"+toHideObjCnPng).css("display", "none");
+}
