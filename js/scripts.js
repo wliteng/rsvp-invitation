@@ -2,6 +2,7 @@
 $(document).ready(function () {
     // iG = 1 if groom then 1, else bride
     // eN = 1 if english then 1, else chinese
+    // loC
     var urlParams = new URLSearchParams(window.location.search);
     var loC = urlParams.get('loC');
     var calAddr;
