@@ -61,7 +61,7 @@ $(document).ready(function () {
         $("#lbl_marry_txt").text("We are getting hitched");
         $("#lbl_marry_txt2").text("The dates are " + strDateEnLg + ", and we would like you to be a part of it.");
 
-        $("#lbl_rsvp").text("We would greatly appreciate if you could RSVP before 2nd of March '24");
+        $("#lbl_rsvp").text("We would greatly appreciate if you could RSVP before 31 March 2024");
 
         $("#f_id").text("Your name");
 
@@ -97,7 +97,7 @@ $(document).ready(function () {
         $("#h_location").text("晚宴地点");
         $("#h_rsvp_title").text("敬请回复（RSVP)");
 
-        $("#lbl_rsvp").text("我们希望您能在2024年3月2号前回复");
+        $("#lbl_rsvp").text("我们希望您能在2024年3月31号前回复");
 
         $("#f_id").attr("placeholder", "名字");
         $("#f_email").attr("placeholder", "电邮");
