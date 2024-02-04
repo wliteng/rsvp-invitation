@@ -1,14 +1,17 @@
-
+var loC;
+var isGroom;
+var isEn;
 $(document).ready(function () {
     // iG = 1 if groom then 1, else bride
     // eN = 1 if english then 1, else chinese
     // loC
     var urlParams = new URLSearchParams(window.location.search);
-    var loC = urlParams.get('loC');
+    loC = urlParams.get('loC');
+    isGroom = urlParams.get('iG');
+    isEn = urlParams.get('eN');
     var calAddr;
-    var PNG = '4233';
-    var KUL = '1422';
-    var script = document.createElement('script');
+    var PG = 'pg';
+    var KUL = 'kl';
     var strDateEn = '2nd June 2024';
     var strDateEnLg = '2nd June 2024, Sunday';
     var strDateCn = '2024年6月2号';
@@ -16,10 +19,12 @@ $(document).ready(function () {
     var strDateTimeSt = 'June 02, 2024 19:00'
     var strDateTimeEd = 'June 02, 2024 23:00'
     var strSubmitting = '<strong>Just a sec!</strong> We are saving your details.'
+    var script = document.createElement('script');
     script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCX4LoVSd9Ockg6b6fFOJZaWWxnkCVgvXo&callback=initMap';
     script.async = true;
-
-    if (loC == PNG) {
+    ppxi();
+    //'YY42Sywa1kKVUDw+LILpng=='
+    if (loC == PG) {
         $("#venueName").text("Daily Fish BW Raja Uda 北海拉惹乌达 天天鱼");
         $("#venueAddr").text("7117, Lorong Ceri 7, Taman Aman Jaya, 12300 Butterworth, Pulau Pinang");
         $("#venueGmap").attr("href", "https://maps.app.goo.gl/znpYSYCqjtnjvrb2A");
@@ -38,8 +43,8 @@ $(document).ready(function () {
     }
     document.head.appendChild(script);
 
-    var isGroom = urlParams.get('iG');
     if (isGroom) {
+        console.log(isGroom);
         if (isGroom == 1) {
             $("#side").val("groom");
         }
@@ -48,8 +53,9 @@ $(document).ready(function () {
         }
     }
 
-    var isEn = urlParams.get('eN');
     if (isEn == 1) {
+        
+        console.log(isEn);
         $("#lbl_gallery_menu").text("Gallery");
         $("#lbl_venue_menu").text("Venue");
         $("#lbl_rsvp_menu").text("RSVP");
@@ -68,14 +74,14 @@ $(document).ready(function () {
         showComponent("venue_date", "venue_date_cn", "venue_date_cn_png");
         showComponent("f_craft", "f_craft_cn", "f_craft_cn_png");
         showComponent("pnl_footer_txt", "pnl_footer_txt_cn");
-        
+
     } else {
         $("#lbl_gallery_menu").text("相册");
         $("#lbl_venue_menu").text("晚宴地点");
         $("#lbl_rsvp_menu").text("敬请回复（RSVP)");
 
         $(".title-name").text("士恩 & 莉婷");
-        if (loC == PNG) {
+        if (loC == PG) {
             $(".title").text("2024年6月8号");
             $("#lbl_marry_txt2").text("日期是2024年6月8号，星期六，我们诚心邀请您参与");
 
@@ -421,16 +427,57 @@ $(document).ready(function () {
 
 /********************** Extras **********************/
 
+function ppxi() {
+    var urlParams = new URLSearchParams(window.location.search);
+    var x = urlParams.get('x');
+    //*** to whoever's looking at this. Hi, for the sake of the RVSP accuracy, please refrain from experimenting the code. Thank you :) ***/
+    switch (x) {
+        case "YY42Sywa1kKVUDw+LILpng==":
+            this.loC = 'kl'
+            this.isGroom = 0;
+            this.isEn = 1;
+            break;
+        case 'r0QKrOowPE+ZB7FFlRqAzA==':
+            loC = 'kl'
+            isGroom = 0;
+            isEn = 0;
+            break;
+        case '2EVNjQ2lqkWM4Jy5u40HVQ==':
+            loC = 'kl'
+            isGroom = 1;
+            isEn = 1;
+            break;
+        case 'rUWx+1eDJEG4ZGMvkmHCTg==':
+            loC = 'kl'
+            isGroom = 1;
+            isEn = 0;
+            break;
+        case 'sWReUe/YFkSWzUvBolmkVw==':
+            loC = 'pg'
+            isGroom = 1;
+            isEn = 0;
+            break;
+        case 'vlmdJv4kT06F+hLtM9lyeA==':
+            break;
+        case 'ibAUYIBNQ0eULIHEx9b6YA==':
+            break;
+        default:
+
+    }
+
+
+}
+
 // Google map
 function initMap() {
     var urlParams = new URLSearchParams(window.location.search);
-    var loC = urlParams.get('loC');
+    var x = urlParams.get('x');
 
     var location_pg = { lat: 5.422840355250391, lng: 100.38048903003009 };
     var location_kl = { lat: 3.1435749530792236, lng: 101.66743469238281 };
     var location = location_kl;
 
-    if (loC == '4233') {
+    if (x == 'sWReUe/YFkSWzUvBolmkVw==') {
         location = location_pg;
     }
     //var location = { lat: 3.1435749530792236, lng: 101.66743469238281 };
