@@ -71,9 +71,13 @@ $(document).ready(function () {
 
         $("#f_id").text("Your name");
 
-        showComponent("venue_date", "venue_date_cn", "venue_date_cn_png");
-        showComponent("f_craft", "f_craft_cn", "f_craft_cn_png");
-        showComponent("pnl_footer_txt", "pnl_footer_txt_cn");
+        document.querySelector('#venue_date').innerHTML += '<span class="fa fa-clock-o"></span>02 June 2024, Sunday, 07:00pm';
+        document.querySelector('#f_craft').innerHTML += 'Crafted by Jaze & Li Teng with lots of <span class="fa fa-heart pulse2"></span>';
+        document.querySelector('#pnl_footer_txt').innerHTML += 'We look forward to hearing from you<span class="fa fa-heart pulse2"></span>';
+
+        // showComponent("venue_date", "venue_date_cn", "venue_date_cn_png");
+        // showComponent("f_craft", "f_craft_cn", "f_craft_cn_png");
+        // showComponent("pnl_footer_txt", "pnl_footer_txt_cn");
 
     } else {
         $("#lbl_gallery_menu").text("相册");
@@ -85,17 +89,25 @@ $(document).ready(function () {
             $(".title").text("2024年6月8号");
             $("#lbl_marry_txt2").text("日期是2024年6月8号，星期六，我们诚心邀请您参与");
 
-            showComponent("venue_date_cn_png", "venue_date_cn", "venue_date");
-            showComponent("f_craft_cn", "f_craft");
-            showComponent("pnl_footer_txt_cn", "pnl_footer_txt");
+            document.querySelector('#venue_date').innerHTML += '<span class="fa fa-clock-o"></span>2024年6月8号，星期六，晚上七点正';
+
+            // showComponent("venue_date_cn_png", "venue_date_cn", "venue_date");
+            // showComponent("f_craft_cn", "f_craft");
+            // showComponent("pnl_footer_txt_cn", "pnl_footer_txt");
         } else {
             $(".title").text("2024年6月2号");
             $("#lbl_marry_txt2").text("日期是2024年6月2号，星期日，我们诚心邀请您参与");
 
-            showComponent("venue_date_cn", "venue_date_cn_png", "venue_date");
-            showComponent("f_craft_cn", "f_craft_cn_png", "f_craft");
-            showComponent("pnl_footer_txt_cn", "pnl_footer_txt");
+            document.querySelector('#venue_date').innerHTML += '<span class="fa fa-clock-o"></span>2024年6月2号，星期日，晚上七点正';
+
+
+            // showComponent("venue_date_cn", "venue_date_cn_png", "venue_date");
+            // showComponent("f_craft_cn", "f_craft_cn_png", "f_craft");
+            // showComponent("pnl_footer_txt_cn", "pnl_footer_txt");
         }
+
+        document.querySelector('#f_craft').innerHTML += '这是我们做的哦 <span class="fa fa-heart pulse2"></span>';
+        document.querySelector('#pnl_footer_txt').innerHTML += '我们期待您联系我们<span class="fa fa-heart pulse2"></span>';
 
         $("#lbl_rsvp_btn").text("敬请回复（RSVP)");
         $("#lbl_marry_txt").text("我们结婚了");
